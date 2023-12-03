@@ -27,3 +27,5 @@ ln -fns $PWD/hacker-but-cute-kitty.conf $HOME/.config/kitty/themes/hacker-but-cu
 ln -fns $PWD/zshrc $HOME/.zshrc
 
 kitten themes --reload-in=all hacker-but-cute
+
+touch $HOME/hostexclusivescript.sh && chmod +x $HOME/hostexclusivescript.sh
