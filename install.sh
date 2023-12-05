@@ -1,4 +1,5 @@
-#!/bin/bash
+#
+#/bin/bash
 
 echo Installing tools
 brew bundle
@@ -29,3 +30,11 @@ ln -fns $PWD/zshrc $HOME/.zshrc
 kitten themes --reload-in=all hacker-but-cute
 
 touch $HOME/hostexclusivescript.sh && chmod +x $HOME/hostexclusivescript.sh
+
+echo Configuring emacs
+
+rm -rf $HOME/.emacs.d $HOME/.emacs
+mkdir $HOME/.config/emacs
+ln -fns $PWD/emacs-init.el $HOME/.config/emacs/init.el
+
+ln -fns $PWD/images $HOME/images

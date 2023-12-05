@@ -1,0 +1,1 @@
+alias kpass-cli="keepassxc-cli open -y=2 ~/Documents/Passwords.kdbx"
