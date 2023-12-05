@@ -10,8 +10,7 @@
 (unless (package-installed-p 'cider)
   (package-install 'cider))
 
-(unless (package-installed-p 'cider)
-  (package-install 'cider))
+(add-hook 'clojure-mode-hook #'cider-mode)
 
 (unless (package-installed-p 'dashboard)
   (package-install 'dashboard))
@@ -24,6 +23,11 @@
 
 (unless (package-installed-p 'sakura-theme)
   (package-install 'sakura-theme))
+
+(unless (package-installed-p 'ace-window)
+  (package-install 'ace-window))
+
+(global-set-key (kbd "M-o") 'ace-window)
 
 (load-theme 'sakura t)
 
