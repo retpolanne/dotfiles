@@ -103,4 +103,4 @@ echo "Welcome Anne :)"
 eval `ssh-agent -s`
 ssh-add --apple-use-keychain $HOME/.ssh/id_ed25519
 
-$HOME/hostexclusivescript.sh
+source $HOME/host-exclusive-script.sh

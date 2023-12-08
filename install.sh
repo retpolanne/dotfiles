@@ -25,6 +25,8 @@ ln -fns $PWD/hacker-but-cute.zsh-theme $HOME/.oh-my-zsh/themes/hacker-but-cute.z
 
 ln -fns $PWD/hacker-but-cute-kitty.conf $HOME/.config/kitty/themes/hacker-but-cute-kitty.conf
 
+ln -fns $PWD/kitty.conf $HOME/.config/kitty/kitty.conf
+
 ln -fns $PWD/zshrc $HOME/.zshrc
 
 kitten themes --reload-in=all hacker-but-cute
