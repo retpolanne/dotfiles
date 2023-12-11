@@ -40,3 +40,5 @@ mkdir $HOME/.config/emacs
 ln -fns $PWD/emacs-init.el $HOME/.config/emacs/init.el
 
 ln -fns $PWD/images $HOME/images
+
+$(brew --prefix)/opt/fzf/install

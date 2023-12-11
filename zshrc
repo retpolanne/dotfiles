@@ -104,3 +104,5 @@ eval `ssh-agent -s`
 ssh-add --apple-use-keychain $HOME/.ssh/id_ed25519
 
 source $HOME/host-exclusive-script.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
