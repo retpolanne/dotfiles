@@ -29,6 +29,9 @@
 
 (global-set-key (kbd "M-o") 'ace-window)
 
+(unless (package-installed-p 'rust-mode)
+  (package-install 'rust-mode))
+
 (load-theme 'sakura t)
 
 (require 'dashboard)
