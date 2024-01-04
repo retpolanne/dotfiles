@@ -99,6 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH=$PATH:$HOME/.config/emacs/bin
 echo "Welcome Anne :)"
 eval `ssh-agent -s`
 ssh-add --apple-use-keychain $HOME/.ssh/id_ed25519

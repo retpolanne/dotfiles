@@ -36,8 +36,12 @@ touch $HOME/hostexclusivescript.sh && chmod +x $HOME/hostexclusivescript.sh
 echo Configuring emacs
 
 rm -rf $HOME/.emacs.d $HOME/.emacs
-mkdir $HOME/.config/emacs
-ln -fns $PWD/emacs-init.el $HOME/.config/emacs/init.el
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
+ln -fns $PWD/emacs-config.el $HOME/.config/doom/config.el
+ln -fns $PWD/emacs-packages.el $HOME/.config/doom/packages.el
+mkdir $HOME/.config/doom/themes
+ln -fns $PWD/doom-anne-pastel-theme.el $HOME/.config/doom/themes/doom-anne-pastel-theme.el
 
 ln -fns $PWD/images $HOME/images
 
