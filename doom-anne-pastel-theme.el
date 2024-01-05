@@ -80,7 +80,7 @@ determine the exact padding."
    (vertical-bar   (doom-darken base1 0.5))
    (selection      dark-blue)
    (builtin        blue)
-   (comments       (if doom-anne-pastel-brighter-comments cyan orange))
+   (comments       (if doom-anne-pastel-brighter-comments cyan violet))
    (doc-comments   violet)
    (constants      violet)
    (functions      green)
