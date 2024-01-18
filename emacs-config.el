@@ -112,3 +112,5 @@
 (setq +doom-dashboard-ascii-banner-fn #'my-weebery-is-always-greater)
 (add-hook! '+doom-dashboard-functions :append
   (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by NAVI!")))
+
+(desktop-save-mode 1)

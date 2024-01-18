@@ -38,6 +38,7 @@ echo Configuring emacs
 rm -rf $HOME/.emacs.d $HOME/.emacs
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install
+ln -fns $PWD/emacs-init.el $HOME/.config/doom/init.el
 ln -fns $PWD/emacs-config.el $HOME/.config/doom/config.el
 ln -fns $PWD/emacs-packages.el $HOME/.config/doom/packages.el
 mkdir $HOME/.config/doom/themes
