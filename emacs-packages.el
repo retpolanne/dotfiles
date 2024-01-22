@@ -55,3 +55,4 @@
 (package! sbt-mode)
 (package! scala-mode)
 (package! lsp-metals)
+(package! rainbow-delimiters)

@@ -114,3 +114,4 @@
   (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by NAVI!")))
 
 (desktop-save-mode 1)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
