@@ -50,9 +50,5 @@
 ;; (unpin! t)
 
 (package! vterm)
-(package! cider)
 (package! multi-vterm)
-(package! sbt-mode)
-(package! scala-mode)
-(package! lsp-metals)
 (package! rainbow-delimiters)

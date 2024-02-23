@@ -31,7 +31,7 @@ ln -fns $PWD/zshrc $HOME/.zshrc
 
 kitten themes --reload-in=all hacker-but-cute
 
-touch $HOME/hostexclusivescript.sh && chmod +x $HOME/hostexclusivescript.sh
+touch $HOME/host-exclusive-script.sh && chmod +x $HOME/host-exclusive-script.sh
 
 echo Configuring emacs
 
