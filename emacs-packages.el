@@ -52,3 +52,4 @@
 (package! vterm)
 (package! multi-vterm)
 (package! rainbow-delimiters)
+(package! go-mode)
