@@ -47,3 +47,7 @@ ln -fns $PWD/doom-anne-pastel-theme.el $HOME/.config/doom/themes/doom-anne-paste
 ln -fns $PWD/images $HOME/images
 
 $(brew --prefix)/opt/fzf/install
+mkdir -p $HOME/.docker/cli-plugins
+ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+
+sudo mkdir /etc/resolver; sudo cp minikube-test-dns /etc/resolver/minikube-test

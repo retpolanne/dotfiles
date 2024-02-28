@@ -100,7 +100,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$HOME/.config/emacs/bin:/opt/homebrew/bin:$PATH
+alias kpass-cli="keepassxc-cli open -y=2 ~/Documents/Passwords.kdbx"
+alias k=kubectl
+alias kctx=kubectx
+alias kns=kubens
+
+export PATH=$HOME/.config/emacs/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$PATH
 echo "Welcome Anne :)"
 eval `ssh-agent -s`
 ssh-add --apple-use-keychain $HOME/.ssh/id_ed25519
