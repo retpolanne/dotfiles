@@ -179,7 +179,7 @@
        ;;zig               ; C, but simpler
 
        :email
-       ;;(mu4e +org +gmail)
+       mu4e
        ;;notmuch
        ;;(wanderlust +gmail)
 
@@ -209,4 +209,18 @@
       :nick "retpolanne"
       :sasl-username "retpolanne"
       :sasl-password "pwd"
-      :channels ("#linux-sunxi"))))
+      :channels ("#linux-sunxi", "#perf"))))
+
+(require 'smtpmail)
+
+(setq send-mail-function 'smtpmail-send-it
+      message-send-mail-function 'smtpmail-send-it
+      smtpmail-smtp-server "posteo.de"
+      smtpmail-smtp-service 587
+      smtpmail-stream-type 'starttls
+      smtpmail-debug-info t
+      smtpmail-debug-verb t)
+
+(setq mu4e-get-mail-command "mbsync --config ~/.mbsyncrc retpolanne@posteo")
+
+(defun +mu4e-colorize-str (str &optional unique herring) str)

@@ -51,3 +51,8 @@ mkdir -p $HOME/.docker/cli-plugins
 ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 
 sudo mkdir /etc/resolver; sudo cp minikube-test-dns /etc/resolver/minikube-test
+ln -fns $PWD/mbsyncrc ~/.mbsyncrc
+mbsync --config ~/.mbsyncrc retpolanne@posteo
+mu init --maildir=~/mail --my-address=retpolanne@posteo.net
+ln -fns $PWD/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent

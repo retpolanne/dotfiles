@@ -1,0 +1,25 @@
+IMAPAccount retpolanne@posteo
+Host posteo.de
+User retpolanne@posteo.net
+PassCmd "gpg -q --for-your-eyes-only --no-tty -d ~/.mbsyncpass.gpg"
+Port 993
+SSLType IMAPS
+SSLVersions TLSv1.2
+AuthMechs *
+
+IMAPStore retpolanne@posteo-remote
+Account retpolanne@posteo
+
+MaildirStore retpolanne@posteo-local
+Path ~/mail/
+Inbox ~/mail/INBOX
+SubFolders Verbatim
+
+Channel retpolanne@posteo
+Master :retpolanne@posteo-remote:
+Slave :retpolanne@posteo-local:
+Patterns *
+Create Slave
+Sync All
+Expunge None
+SyncState *
