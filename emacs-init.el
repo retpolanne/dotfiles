@@ -201,14 +201,14 @@
       :port 6697
       :nick "retpolanne"
       :sasl-username "retpolanne"
-      :sasl-password "pwd"
+      :sasl-password (lambda (x) (read-passwd "SASL password: "))
       :channels ("#linuxfoundation-gsoc")))
   (set-irc-server! "irc.oftc.net"
     `(:tls t
       :port 6697
       :nick "retpolanne"
       :sasl-username "retpolanne"
-      :sasl-password "pwd"
+      :sasl-password (lambda (x) (read-passwd "SASL password: "))
       :channels ("#linux-sunxi", "#perf"))))
 
 (require 'smtpmail)

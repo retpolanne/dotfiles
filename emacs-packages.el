@@ -53,3 +53,5 @@
 (package! multi-vterm)
 (package! rainbow-delimiters)
 (package! go-mode)
+(package! mu4e
+  :recipe (:host github :repo "djcb/mu"))
