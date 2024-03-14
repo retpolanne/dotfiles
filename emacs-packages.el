@@ -56,3 +56,7 @@
 (package! scala-mode)
 (package! lsp-metals)
 (package! rainbow-delimiters)
+(package! yaml-mode)
+(package! xclip)
+(package! ellama)
+(package! plz)
