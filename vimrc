@@ -34,6 +34,7 @@ filetype plugin indent on    " required
 " Custom Setup
 syntax on
 set number
+set belloff=all
 
 " nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>

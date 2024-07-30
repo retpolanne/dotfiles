@@ -55,3 +55,5 @@
 (package! go-mode)
 (package! mu4e
   :recipe (:host github :repo "djcb/mu"))
+(package! message-view-patch)
+(package! hledger-mode)
