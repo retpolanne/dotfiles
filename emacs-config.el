@@ -74,44 +74,21 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(defun my-weebery-is-always-greater ()
-  (let* ((banner '(     "⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⣀⣾⣿⣿⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-			"⣿⣿⠇⠀⢀⠈⢀⠈⢀⠈⢀⠈⢀⠈⢀⠈⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣾⣿⣿⣿⣿⣿⣿⣿⣷⡀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-			"⢻⡿⠀⠀⡀⠠⠀⢀⠀⠠⠀⢀⠀⠠⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-			"⠀⠁⠀⡀⠀⠄⠐⠀⠠⠀⠐⠀⠠⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿⠛⠋⠉⠉⠉⠉⠉⠉⠙⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-			"⠀⠀⠄⠁⡀⠀⠄⠀⡀⠠⠀⠐⠀⡀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠋⠉⢰⣿⡆⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-			"⠀⠀⠄⠂⠀⠄⠀⠂⢀⠀⠐⠀⠄⠀⢸⣿⣿⣿⣿⣿⢿⣻⣽⡄⡇⠀⠀⠀⠀⣿⣿⡄⠀⣼⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀"
-			"⠀⠀⠠⠀⠂⠀⠂⠀⠄⠀⠂⠠⠀⠈⠈⣿⡿⣻⢉⣾⣿⣿⣿⡇⢱⠀⠀⠀⠀⣿⡿⢓⢀⣩⣍⡄⡀⠀⡄⠀⠀⠀⠀⠀⣼⠃⠀⠀⠀⠀"
-			"⠀⠀⠄⠐⠀⠁⠠⠈⠀⠐⠀⠠⠀⢁⠀⠁⢀⣭⡄⣬⣭⣛⣿⣿⣸⣼⢠⣷⣦⣿⠟⣩⣿⠿⢿⣷⣇⣬⣷⠀⠀⠀⢸⡀⣾⠃⠀⠀⠀⠀"
-			"⠀⠀⢀⠂⠈⠀⠄⠐⠈⠀⠠⠁⢰⣽⣤⣿⠿⢟⡳⢿⢮⣻⣿⣿⣿⣿⣿⣿⣿⣿⡻⡡⢆⠉⠣⢢⠸⣿⣿⠀⣀⠀⣿⣧⣿⡁⠀⠀⠀⠀"
-			"⠀⠀⡀⠠⠀⠁⡀⠄⠂⠁⠀⢀⢼⣿⡟⣱⠡⠐⠠⠙⣮⣿⣻⣽⣿⣿⣿⣿⣿⣿⣾⣧⠂⠄⡌⡹⣤⣿⡧⢰⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀"
-			"⠀⠀⠀⠄⠐⠀⢀⠀⣠⣇⠀⣿⣿⣿⣀⣿⣔⠡⢄⣡⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣯⣯⣴⣾⣿⣻⡇⣼⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀"
-			"⠀⠀⠁⠠⠀⠈⠀⣰⣿⠛⣧⣿⣿⣿⣿⣿⣮⣽⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⠇⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀"
-			"⠀⠀⠐⠀⠀⠂⠀⢻⣿⣶⡝⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢀⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀"
-			"⠀⠀⠈⢀⠐⣰⡄⠀⠈⠳⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣪⣿⣿⣿⣿⣿⣿⣿⣻⡟⢸⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀"
-			"⠀⠀⠁⡀⢰⣿⣿⣄⠀⠀⠀⠀⠈⢿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣷⣾⣿⣿⣿⣿⣿⣿⣿⠟⠀⢸⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀"
-			"⠀⠀⠄⢠⣿⣿⣿⣿⡄⡆⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡽⠃⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀"
-			"⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣄⣦⣄⡄⣠⡈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢯⣻⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀"
-			"⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢿⢻⣯⡿⢿⢿⣿⣿⣿⣿⣿⣿⣿⣿⢟⢵⣾⣿⡆⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀"
-			"⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⡼⣿⣿⣿⣿⣮⣿⣟⣿⣿⣿⣻⣵⣿⢘⣿⣿⣇⠀⠀⠀⢸⣷⣯⣟⣿⢿⣿⣿⡟⠀⠀⠀"
-			"⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣻⣿⣷⣯⣿⣮⣝⢿⣿⣿⣿⣿⣿⣿⣿⣵⣿⢧⣟⣿⣿⣿⡄⠀⠀⣿⣿⣿⣿⣿⣿⣯⡿⠁⠀⠀⠀"
-			"⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣾⣿⣿⣿⣿⣿⣿⣿⣮⡻⣿⣿⣿⣿⣿⣿⣿⢏⠮⠛⠛⠛⢿⡇⠀⠀⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀"
-			"⢻⣿⣿⣿⣿⣿⢿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠁⠀⠀⠉⠻⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⠿⠿⠛⠁⠀⠀⠀⠀⠀⠀"
-			"⠀⠻⣿⣿⣯⢾⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-			"⠀⠀⠈⠻⠿⠿⠿⠟⠿⠿⠛⠋⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"))
-         (longest-line (apply #'max (mapcar #'length banner))))
-    (put-text-property
-     (point)
-     (dolist (line banner (point))
-       (insert (+doom-dashboard--center
-                +doom-dashboard--width
-                (concat line (make-string (max 0 (- longest-line (length line))) 32)))
-               "\n"))
-     'face 'doom-dashboard-banner)))
 
-(setq +doom-dashboard-ascii-banner-fn #'my-weebery-is-always-greater)
+(let ((alternatives '("~/images/lain.gif"
+                      "~/images/lain-dance.gif")))
+  (setq fancy-splash-image (nth (random (length alternatives)) alternatives)))
+
 (add-hook! '+doom-dashboard-functions :append
   (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by NAVI!")))
 
 (desktop-save-mode 1)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+; Use right-option (alt) for meta. Left option for macOS
+(setq mac-option-modifier nil)
+(setq mac-right-option-modifier 'meta)
+(setq doom-font (font-spec :size 20))
+
+(setq langtool-bin "/opt/homebrew/opt/languagetool/bin/languagetool")
+(setq langtool-default-language "pt-BR")

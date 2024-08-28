@@ -57,3 +57,4 @@
   :recipe (:host github :repo "djcb/mu"))
 (package! message-view-patch)
 (package! hledger-mode)
+(package! langtool)
