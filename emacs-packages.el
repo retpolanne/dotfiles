@@ -60,3 +60,4 @@
 (package! xclip)
 (package! ellama)
 (package! plz)
+(package! nerd-icons)

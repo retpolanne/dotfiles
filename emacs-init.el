@@ -194,3 +194,7 @@
        :config
        ;;literate
        (default +bindings +smartparens))
+
+(after! nerd-icons
+  (if (not (file-exists-p "~/Library/Fonts/NFM.ttf"))
+        (nerd-icons-install-fonts)))
