@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$HOME/.config/emacs/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/.config/emacs/bin:/opt/homebrew/bin:$HOME/go/bin:$PATH
 echo "Welcome Anne :)"
 eval `ssh-agent -s`
 ssh-add --apple-use-keychain $HOME/.ssh/id_ed25519
