@@ -66,3 +66,5 @@
 (package! nerd-icons)
 (package! apple-keychain-environment
   :recipe (:host github :repo "retpolanne/apple-keychain-environment"))
+(package! sakura-theme)
+(package! autothemer)
