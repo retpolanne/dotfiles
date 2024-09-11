@@ -92,3 +92,6 @@
 
 (setq langtool-bin "/opt/homebrew/opt/languagetool/bin/languagetool")
 (setq langtool-default-language "pt-BR")
+
+(use-package apple-keychain-environment
+  :init (setq ssh-path "test"))

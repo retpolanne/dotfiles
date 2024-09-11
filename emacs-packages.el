@@ -59,3 +59,10 @@
 (package! hledger-mode)
 (package! langtool)
 (package! poly-ansible)
+(package! yaml-mode)
+(package! xclip)
+(package! ellama)
+(package! plz)
+(package! nerd-icons)
+(package! apple-keychain-environment
+  :recipe (:host github :repo "retpolanne/apple-keychain-environment"))
