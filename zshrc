@@ -105,6 +105,8 @@ alias k=kubectl
 alias kctx=kubectx
 alias kns=kubens
 
+alias llama="ollama run gemma2"
+
 export PATH=$HOME/.config/emacs/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$PATH
 echo "Welcome Anne :)"
 eval `ssh-agent -s`

@@ -58,3 +58,4 @@
 (package! message-view-patch)
 (package! hledger-mode)
 (package! langtool)
+(package! poly-ansible)

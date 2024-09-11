@@ -88,7 +88,7 @@
 ; Use right-option (alt) for meta. Left option for macOS
 (setq mac-option-modifier nil)
 (setq mac-right-option-modifier 'meta)
-(setq doom-font (font-spec :size 20))
+(setq doom-font (font-spec :size 16))
 
 (setq langtool-bin "/opt/homebrew/opt/languagetool/bin/languagetool")
 (setq langtool-default-language "pt-BR")
