@@ -61,3 +61,5 @@
 (package! ellama)
 (package! plz)
 (package! nerd-icons)
+(package! apple-keychain-environment
+  :recipe (:host github :repo "retpolanne/apple-keychain-environment"))

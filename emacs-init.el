@@ -198,3 +198,7 @@
 (after! nerd-icons
   (if (not (file-exists-p "~/Library/Fonts/NFM.ttf"))
         (nerd-icons-install-fonts)))
+
+(after! apple-keychain-environment
+  (setq ssh-path "$HOME/.ssh/id_ed25519")
+  (apple-keychain-environment-refresh))
