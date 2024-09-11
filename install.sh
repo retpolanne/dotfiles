@@ -43,12 +43,15 @@ ln -fns $PWD/emacs-config.el $HOME/.config/doom/config.el
 ln -fns $PWD/emacs-packages.el $HOME/.config/doom/packages.el
 mkdir $HOME/.config/doom/themes
 ln -fns $PWD/doom-anne-pastel-theme.el $HOME/.config/doom/themes/doom-anne-pastel-theme.el
+doom sync -u
 
 ln -fns $PWD/images $HOME/images
 ln -fns $PWD/gnu.emacs.daemon.plist $HOME/Library/LaunchAgents/gnu.emacs.daemon.plist
 
 launchctl unload $HOME/Library/LaunchAgents/gnu.emacs.daemon.plist
 launchctl load $HOME/Library/LaunchAgents/gnu.emacs.daemon.plist
+
+ln -fns $PWD/EmacsClient.app $HOME/Applications/EmacsClient.app
 
 $(brew --prefix)/opt/fzf/install
 mkdir -p $HOME/.docker/cli-plugins
