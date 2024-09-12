@@ -68,3 +68,7 @@
   :recipe (:host github :repo "retpolanne/apple-keychain-environment"))
 (package! sakura-theme)
 (package! autothemer)
+(package! markdown-preview-eww)
+(package! consult)
+(package! consult-gh)
+(package! forge)
