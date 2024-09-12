@@ -58,7 +58,7 @@
 (package! message-view-patch)
 (package! hledger-mode)
 (package! langtool)
-(package! poly-ansible)
+;(package! poly-ansible)
 (package! yaml-mode)
 (package! xclip)
 (package! ellama)
