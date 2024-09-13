@@ -72,3 +72,4 @@
 (package! consult)
 (package! consult-gh)
 (package! forge)
+(package! dashboard)

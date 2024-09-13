@@ -1,10 +1,10 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
+;; Place your private confi  guration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
 
-;; Some functionality uses this to identify you, e.g. GPG configuration, email
+;; Some functionality uses t his to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 ;; (setq user-full-name "John Doe"
 ;;       user-mail-address "john@doe.com")
@@ -13,7 +13,7 @@
 ;;
 ;; - `doom-font' -- the primary font to use
 ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
-;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
+;; - `doom-big-fo nt' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
 ;; - `doom-symbol-font' -- for symbols
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
@@ -78,14 +78,16 @@
 ;; they are implemented.
 
 (let ((alternatives '("~/images/lain.gif"
-                      "~/images/lain-dance.gif")))
+                      "~/images/lain-dance.gif"
+                      "~/images/powernavi-badge.jpg")))
   (setq fancy-splash-image (nth (random (length alternatives)) alternatives)))
-
-(add-hook! '+doom-dashboard-functions :append
-  (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by NAVI!")))
 
 (desktop-save-mode 1)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+(add-hook! '+doom-dashboard-functions
+           :append
+           (insert "\n" (+doom-dashboard--center +doom-dashboard--width "close the world, open the next")))
 
 ; Use right-option (alt) for meta. Left option for macOS
 (setq mac-option-modifier nil)
@@ -95,5 +97,4 @@
 (setq langtool-bin "/opt/homebrew/opt/languagetool/bin/languagetool")
 (setq langtool-default-language "pt-BR")
 
-(use-package apple-keychain-environment
-  :init (setq ssh-path "test"))
+(use-package apple-keychain-environment)
