@@ -63,3 +63,15 @@ mbsync --config ~/.mbsyncrc retpolanne@posteo
 mu init --maildir=~/mail --my-address=retpolanne@posteo.net
 ln -fns $PWD/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
+
+pinentry-touchid -fix
+
+ln -fns $PWD/gitconfig ~/.gitconfig
+
+MAIL="annie@retpolanne.com"
+GPG_SECRET_KEY_ID=$(gpg --list-secret-keys --with-colons --keyid-format LONG annie@retpolanne.com | grep $MAIL | awk -F ':' '{print $8}')
+
+git config --global commit.gpgsign true
+git config --global user.name 'Anne Isabelle "Anya" Macedo'
+git config --global user.email "$MAIL"
+git config --global user.signingkey "$GPG_SECRET_KEY_ID"
