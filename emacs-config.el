@@ -78,16 +78,29 @@
 ;; they are implemented.
 
 (let ((alternatives '("~/images/lain.gif"
-                      "~/images/lain-dance.gif"
-                      "~/images/powernavi-badge.jpg")))
+                      "~/images/lain-dance.gif")))
   (setq fancy-splash-image (nth (random (length alternatives)) alternatives)))
 
 (desktop-save-mode 1)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
-(add-hook! '+doom-dashboard-functions
-           :append
-           (insert "\n" (+doom-dashboard--center +doom-dashboard--width "close the world, open the next")))
+(defun doom-dashboard-put-image (image-file-path point)
+  (let ((image (create-image image-file-path)))
+    (add-text-properties
+     point (point) `(display ,image rear-nonsticky (display)))
+    (save-excursion
+      (goto-char point)
+      (insert (make-string
+               (truncate
+                (max 0 (+ 1 (/ (- +doom-dashboard--width
+                                  (car (image-size image nil)))
+                               2))))
+               ? )))))
+
+(defun doom-dashboard-widget-footer ()
+  (let ((point (point)))
+    (insert "\n\n\n" "close the world, open the next" "\n")
+    (doom-dashboard-put-image "~/images/powernavi-badge.jpg" point)))
 
 ; Use right-option (alt) for meta. Left option for macOS
 (setq mac-option-modifier nil)
