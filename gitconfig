@@ -1,0 +1,6 @@
+[commit]
+	gpgsign = true
+[user]
+	name = Anne Isabelle \"Anya\" Macedo
+	email = annie@retpolanne.com
+	signingkey = C2D880F7673095925098AB8DE50ADCC6050AEA53

@@ -73,3 +73,4 @@
 (package! consult-gh)
 (package! forge)
 (package! dashboard)
+(package! xcscope)
