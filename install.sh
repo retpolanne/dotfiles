@@ -29,6 +29,8 @@ ln -fns $PWD/kitty.conf $HOME/.config/kitty/kitty.conf
 
 ln -fns $PWD/zshrc $HOME/.zshrc
 
+ln -fns $PWD/ssh-config $HOME/.ssh/config
+
 kitten themes --reload-in=all hacker-but-cute
 
 touch $HOME/host-exclusive-script.sh && chmod +x $HOME/host-exclusive-script.sh

@@ -112,3 +112,5 @@
 
 (use-package apple-keychain-environment)
 (cscope-setup)
+(add-to-list 'load-path "/opt/homebrew/Cellar/mu/1.12.7/share/emacs/site-lisp/mu/mu4e")
+

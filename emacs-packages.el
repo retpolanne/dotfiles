@@ -53,8 +53,7 @@
 (package! multi-vterm)
 (package! rainbow-delimiters)
 (package! go-mode)
-(package! mu4e
-  :recipe (:host github :repo "djcb/mu"))
+(package! mu4e)
 (package! message-view-patch)
 (package! hledger-mode)
 (package! langtool)
@@ -74,3 +73,5 @@
 (package! forge)
 (package! dashboard)
 (package! xcscope)
+(package! gnuplot)
+(package! gcmh)

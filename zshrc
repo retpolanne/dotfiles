@@ -107,7 +107,7 @@ alias kns=kubens
 
 alias llama="ollama run gemma2"
 
-export PATH=$HOME/.config/emacs/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$PATH
+export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$HOME/.config/emacs/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$PATH
 echo "Welcome Anne :)"
 eval `ssh-agent -s`
 ssh-add --apple-use-keychain $HOME/.ssh/id_ed25519
