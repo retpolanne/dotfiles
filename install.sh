@@ -48,12 +48,6 @@ ln -fns $PWD/doom-anne-pastel-theme.el $HOME/.config/doom/themes/doom-anne-paste
 doom sync -u
 
 ln -fns $PWD/images $HOME/images
-ln -fns $PWD/gnu.emacs.daemon.plist $HOME/Library/LaunchAgents/gnu.emacs.daemon.plist
-
-launchctl unload $HOME/Library/LaunchAgents/gnu.emacs.daemon.plist
-launchctl load $HOME/Library/LaunchAgents/gnu.emacs.daemon.plist
-
-ln -fns $PWD/EmacsClient.app $HOME/Applications/EmacsClient.app
 
 $(brew --prefix)/opt/fzf/install
 mkdir -p $HOME/.docker/cli-plugins
