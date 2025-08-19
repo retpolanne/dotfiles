@@ -202,3 +202,10 @@
 (after! apple-keychain-environment
   (setq ssh-path "$HOME/.ssh/id_ed25519")
   (apple-keychain-environment-refresh))
+
+(setq rust-format-on-save t)
+
+(after! orglink
+  (global-orglink-mode))
+
+(setq orglink-activate-in-modes '(vterm-mode))
