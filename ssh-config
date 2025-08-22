@@ -1,2 +1,8 @@
 Include /Users/annemacedo/.colima/ssh_config
 Include /Users/annemacedo/.lima/debian-12/ssh.config
+
+Host *
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
+  ForwardAgent yes
+  ServerAliveInterval 60

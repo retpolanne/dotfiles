@@ -77,3 +77,4 @@
 (package! gcmh)
 (package! doom-modeline)
 (package! flycheck-package)
+(package! orglink)

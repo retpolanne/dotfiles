@@ -234,3 +234,8 @@
 (after! apple-keychain-environment
   (setq ssh-path "$HOME/.ssh/id_ed25519")
   (apple-keychain-environment-refresh))
+
+(after! orglink
+  (global-orglink-mode))
+
+(global-set-key (kbd "C-x C-f") 'projectile-find-file)
