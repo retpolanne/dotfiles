@@ -1,0 +1,8 @@
+[export]
+directory = "{folder_album}"
+download_missing = true
+exiftool = true
+finder_tag_keywords = true
+keyword_template = [ "{label}",]
+touch_file = true
+use_photokit = true

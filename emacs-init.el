@@ -238,5 +238,4 @@
 (after! orglink
   (global-orglink-mode))
 
-(global-set-key (kbd "C-x C-f") 'projectile-find-file)
 (setq orglink-activate-in-modes '(vterm-mode))
