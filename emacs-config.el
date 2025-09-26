@@ -115,3 +115,14 @@
 (add-to-list 'load-path "/opt/homebrew/Cellar/mu/1.12.7/share/emacs/site-lisp/mu/mu4e")
 
 (setq orglink-activate-in-modes '(vterm-mode js-json-mode))
+
+(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
+(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
+
+(use-package proced
+  :ensure nil
+  :commands proced
+  :custom
+  (proced-show-remote-processes t)
+  (proced-enable-color-flag t)
+  (proced-filter 'all))
