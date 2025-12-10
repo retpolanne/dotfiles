@@ -71,3 +71,5 @@ git config --global commit.gpgsign true
 git config --global user.name 'Anne Isabelle "Anya" Macedo'
 git config --global user.email "$MAIL"
 git config --global user.signingkey "$GPG_SECRET_KEY_ID"
+
+ln -fns $PWD/karabiner.json $HOME/.config/karabiner/karabiner.json
