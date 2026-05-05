@@ -73,3 +73,8 @@ git config --global user.email "$MAIL"
 git config --global user.signingkey "$GPG_SECRET_KEY_ID"
 
 ln -fns $PWD/karabiner.json $HOME/.config/karabiner/karabiner.json
+ln -fns $PWD/mount-media.app /Applications/mount-media.app
+echo "Don't forget to add mount-media.app to the login items"
+hs -A </dev/null
+ln -fns $PWD/hs-init.lua $HOME/.hammerspoon/init.lua
+hs -c "hs.reload()"

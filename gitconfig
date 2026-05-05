@@ -4,3 +4,12 @@
 	name = Anne Isabelle \"Anya\" Macedo
 	email = annie@retpolanne.com
 	signingkey = C2D880F7673095925098AB8DE50ADCC6050AEA53
+[lfs "customtransfer.xet"]
+	path = git-xet
+	args = transfer
+	concurrent = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

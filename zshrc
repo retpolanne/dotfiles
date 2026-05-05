@@ -117,3 +117,6 @@ source $HOME/host-exclusive-script.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export EDITOR="emacsclient"
+
+# Added by Hugging Face CLI installer
+export PATH="/Users/annemacedo/.local/bin:$PATH"
